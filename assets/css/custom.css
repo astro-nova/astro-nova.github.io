@@ -4,6 +4,14 @@
     --sidebarWidthSm: max(5vw, 10vh);
     --sidebarWidthLg: max(25vw, 35vh)
 }
+
+/* Colors */
+.blue{
+    color: #33AAFF;
+}
+.red{
+    color: #FF9955;
+}
   
 
 .wrapper {
@@ -12,10 +20,14 @@
 }
 
 a{
-    color: inherit;
+    color: #33AAFF;
     text-decoration: none;
 }
 
+p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
 /* Sidebar */
 
@@ -28,17 +40,18 @@ a{
     left: 0; 
     height: 100vh;
     z-index: 999;
-    background: #050510; /*url('../../images/xdf.jpg');*/
-    /* background: url('../../images/xdf.jpg'); */
+    /* background: #050510; url('../../images/xdf.jpg'); */
+    background: url('../../images/xdf.jpg');
+    background-size: contain;
     /* background: #999; */
     color: #fff;
-    transition: all 0.3s;
+    /* transition: all 0.3s; */
 }
 
 #content {
     width: calc(100% - var(--sidebarWidthLg));
-    padding: 5rem;
-    min-height: 100vh;
+    padding: 0 5rem 0 5rem;
+    height: 100%;
     transition: all 0.3s;
     position: absolute;
     top: 0;
@@ -58,6 +71,7 @@ a{
     margin-bottom: 5vh;
 }
 
+
 /* Navbar */
 #sidebar ul li, #sidebar #nav-button {
     text-align: left;
@@ -71,10 +85,24 @@ a{
     vertical-align: -7%;
 }
 
+#sidebar a{
+    color: inherit;
+}
+#sidebar a:hover{
+    color: #47D3E5;
+}
+
 #nav-button {
     position: absolute;
     bottom: 1%;
     width: 100%;
+}
+
+#sidebar .scrolly{
+    transition: all 0s;
+}
+#sidebar .scrolly.active{
+    color: #47D3E5;
 }
 
 
@@ -126,7 +154,73 @@ a{
 
 }
 
-/* Social menu */
+
+/* All pages */
+#home, #research, #outreach, #about, #contact {
+    margin-bottom: 10vh;
+    min-height: 100%;
+    padding-top: 3rem;
+}
+
+.banner{
+    width: 100%;
+    height: auto;
+}
+
+.submajor{
+    margin-top: 0rem;
+}
+
+.card-title{
+    font-size: 1.0rem;
+}
+.card-text{
+    font-size: 0.9rem;
+}
+
+/* Index page: introduction */
+
+#home{
+    min-height: 100%;
+}
 #social{
+    position: absolute;
+    top: 1%;
+    right: 1%;
     font-size: 2rem;
+}
+#home .image.right   {
+    height: 80vh;
+    max-width: 50%;
+}
+#home .image.right  img {
+    border-radius: 0;
+}
+
+/* Research page */
+#researchBanner{
+    --bannerWidth: 100%;
+    width: var(--bannerWidth);
+    transition: all 0.5s;
+    background-image: url('../../images/quenching.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 0;
+    padding-top: calc(0.36 * var(--bannerWidth));
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#researchBanner:hover{
+    transition: all 0.5s;
+    background-image: url('../../images/quenching_hover.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* Smaller screens: hide banner images */
+@media (max-width: 768px) {
+    #home .image{
+        display: none;
+    }
 }

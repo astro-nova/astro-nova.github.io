@@ -21,7 +21,7 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div class="wrapper">
+			<div class="wrapper" id="top">
 
 				<!-- Sidebar -->
 				<nav id="sidebar">
@@ -29,30 +29,31 @@
 					<img src="images/me_square.jpg">
 					
 					<ul class="nav flex-column">
-						<li class="nav-item"><a class="active" href="#">
+						<li class="nav-item"><a href="#home">
 							<i class="fi fi-rr-home"></i>
 							<span class="nav-label">home</span>
 						</a></li>
-						<li class="nav-item"><a href="#">
+						<li class="nav-item"><a href="#research">
 							<i class="fi fi-rr-physics"></i>
 							<span class="nav-label">research</span>
 						</a></li>
-						<li class="nav-item"><a href="#">
+						<li class="nav-item"><a href="#outreach">
 							<i class="fi fi-rr-microphone-alt"></i>
-							<span class="nav-label">outreach</span>
+							<span class="nav-label">community</span>
 						</a></li>
-						<li class="nav-item"><a href="#">
+						<li class="nav-item"><a href="#about">
 							<i class="fi fi-rr-woman-head"></i>
 							<span class="nav-label">about me</span>
 						</a></li>
-						<li class="nav-item"><a href="#">
+						<li class="nav-item"><a href="#contact">
 							<i class="fi fi-rr-envelope"></i>
 							<span class="nav-label">contact</span>
 						</a></li>
 					</ul>
 					
 					<div id="nav-button">
-						<a href="#" id="sidebarCollapse"><i class="fi fi-rr-align-justify"></i>
+						<a href="#0" id="sidebarCollapse">
+							<i class="fi fi-rr-align-justify"></i>
 							<span class="nav-label">hide menu</span>
 						</a>
 					</div>
@@ -61,11 +62,15 @@
 				<!-- Page content -->
 				<div id="content">
 
-					<div>
-						<h1>Welcome!</h1>
+					<section id="home">
+						<h1>Hi!</h1>
+						
 						<p class="major">
+							<span class="image right">
+								<img  src="images/hst_spogs.png" alt="Hubble Space Telscope images of post-starburst galaxies"/>
+							</span>
 							My name is <strong>Liza Sazonova</strong> and I am finishing my PhD at Johns Hopkins University. I work with 
-							Katey Alatalo, Kate Rowlands, and the rest of the wonderful <a href="http://www.spogs.org/">SPOGs</a> team. We are studying
+							Katey Alatalo, Kate Rowlands, and the rest of the wonderful <a href="http://www.spogs.org/">SPOGs team</a>. We are studying
 							why and how do galaxies die -- focusing on many facets of this process.
 						</p>
 						<p class="major">
@@ -74,16 +79,96 @@
 							I use <strong>multi-wavelength observations</strong>, <strong>morphology analysis</strong> and 
 							<strong>machine learning</strong> to answer these questions!
 						</p>
+						
 						<div id="social">
 							<a href="#"><i class="lab la-github"></i></a>
 							<a href="#"><i class="lab la-twitter"></i></a>
 							<a href="#"><i class="lab la-instagram"></i></a>
 							<a href="#"><i class="las la-envelope"></i></a>
 						</div>
-						<!-- <ul class="actions stacked">
-							<li><a href="#first" class="button big wide smooth-scroll-middle">More about me</a></li>
-						</ul> -->
-					</div>
+						<ul class="actions stacked">
+							<li><a href="#research" class="button big wide smooth-scroll-middle">Keep scrolling!</a></li>
+						</ul>
+					</section>
+
+					<section id="research">
+						<h1>Research</h1>
+						<h3>	
+							Galaxies evolve from <span class="blue">blue, star-forming disks</span> to 
+							<span class="red">red-and-dead bulge-dominated</span> galaxies. <br />
+							But why do structure and star formation change at the same time?
+						</h3>
+						<p class="submajor">
+							Galaxy structure (stars) are only affected by gravity, while star formation fuel (gas) is much 
+							easier to remove by hydrodynamical effects. How do <strong>quenching mechanisms</strong> give 
+							rise to both gravitational and hydrodynamical forces that drive this evolution?
+						</p>
+						<div id="researchBanner"></div>
+						<p>
+							I study the structural evolution of galaxies using morphology analysis, multi-wavelength data 
+							(and recently, machine learning). I like data science and image analysis, 
+							and I think this is a really cool problem to solve with these tools!
+						</p>
+						<p>My most recent projects & publications:</p>
+						<div class="row row-cols-1 row-cols-md-3 g-4">
+							<div class="col">
+							  <div class="card h-100">
+								<img src="images/cluster.JPG" class="card-img-top" alt="...">
+								<div class="card-body">
+								  <h5 class="card-title">Compact, bulge-dominated galaxies in z~1.5 clusters</h5>
+								  <p class="card-text">
+									  We found that 2 out of 4 high-redshift clusters have many more <em>compact</em>,
+									  <em>bulge-dominated</em> galaxies than the field. These young clusters are 
+									  already very efficient at quenching -- and it's not ram pressure stripping!<br/>
+									  <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...899...85S/abstract"
+									  target="_blank">2020ApJ...899...85S</a>
+								  </p>
+								</div>
+							  </div>
+							</div>
+							<div class="col">
+							  <div class="card h-100">
+								<img src="images/rff.JPG" class="card-img-top" alt="...">
+								<div class="card-body">
+								  <h5 class="card-title">Hidden disturbances in post-starburst galaxies revealed by HST</h5>
+								  <p class="card-text">
+									We looked at morphology of 26 <em>post-starburst</em> galaxies using HST and SDSS.
+									Almost 90% were very disturbed in HST imaging, but only 50% in SDSS! These disturbances 
+									are strange dust substructures, rather than obvious merger features. <br/>
+									<a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...919..134S/abstract"
+									  target="_blank">2021ApJ...919..134S</a>
+								  </p>
+								</div>
+							  </div>
+							</div>
+							<div class="col">
+								<div class="card h-100">
+								  <img src="images/ml.png" class="card-img-top" alt="...">
+								  <div class="card-body">
+									<h5 class="card-title">Unbiased morphology with machine learning</h5>
+									<p class="card-text">
+									  Morphology measurements vary a lot based on instrument depth and resolution.
+									  Using Convolutional Neural Networks and simulated images as a training set,
+									  I want to get rid of this instrumental bias. <br/>
+									  <strong>Next project!</strong>
+									</p>
+								  </div>
+								</div>
+							  </div>
+						  </div>
+					</section>
+
+					<section id="outreach">
+						<h1>Outreach</h1>
+					</section>
+
+					<section id="about">
+						About me
+					</section>
+
+					<section id="contact">
+						Contact
+					</section>
 				</div>
 			</div>
 
