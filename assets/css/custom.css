@@ -1,0 +1,132 @@
+/* Variables */
+
+:root {
+    --sidebarWidthSm: max(5vw, 10vh);
+    --sidebarWidthLg: max(25vw, 35vh)
+}
+  
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Sidebar */
+
+/* Large screens: large sidebar with photo */
+
+#sidebar {
+    width: var(--sidebarWidthLg);
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    height: 100vh;
+    z-index: 999;
+    background: #050510; /*url('../../images/xdf.jpg');*/
+    /* background: url('../../images/xdf.jpg'); */
+    /* background: #999; */
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#content {
+    width: calc(100% - var(--sidebarWidthLg));
+    padding: 5rem;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* Photo in the sidebar */
+#sidebar img {
+    display: block;
+    width: 50%;
+    height: auto;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11vh;
+    margin-bottom: 5vh;
+}
+
+/* Navbar */
+#sidebar ul li, #sidebar #nav-button {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    padding-left: 30%;
+}
+
+#sidebar i {
+    margin-right: 1rem;
+    vertical-align: -7%;
+}
+
+#nav-button {
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+}
+
+
+/* Collapsed version */
+
+#content.active {
+    width: calc(100% - var(--sidebarWidthSm));
+}
+
+#sidebar.active {
+    width: var(--sidebarWidthSm);
+}
+
+#sidebar.active .nav-label{
+    display: none;
+}
+
+#sidebar.active img {
+    width: 70%;
+}
+
+/* Smaller screens: collapse by default */
+@media (max-width: 768px) {
+    #sidebar {
+        width: var(--sidebarWidthSm);
+    }
+    #sidebar.active {
+        width: var(--sidebarWidthLg);
+    }
+    #content {
+        width: calc(100% - var(--sidebarWidthSm));
+    }
+    #content.active{
+        width: calc(100% - var(--sidebarWidthLg));
+    }
+    #sidebar .nav-label{
+        display: none;
+    }
+    #sidebar.active .nav-label{
+        display:inline;
+    }
+    #sidebar img {
+        width: 70%;
+    }
+    #sidebar.active img {
+        width: 50%;
+    }
+
+
+}
+
+/* Social menu */
+#social{
+    font-size: 2rem;
+}
