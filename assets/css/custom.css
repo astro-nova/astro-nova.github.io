@@ -67,7 +67,7 @@ p{
     border-radius: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 11vh;
+    margin-top: 8vh;
     margin-bottom: 5vh;
 }
 
@@ -167,8 +167,11 @@ p{
     height: auto;
 }
 
-.submajor{
-    margin-top: 0rem;
+.subheading{
+    font-size: 1.3rem;
+}
+.subheading::after{
+    margin-top: 0;
 }
 
 .card-title{
@@ -217,10 +220,21 @@ p{
     background-repeat: no-repeat;
 }
 
+/* Community page */
+#community .col{
+    margin: 1rem 0 0 0;
+}
 
 /* Smaller screens: hide banner images */
 @media (max-width: 768px) {
     #home .image{
         display: none;
+    }
+}
+
+/* Smaller screens: get rid of major paragraphs and subheadings */
+@media (max-width: 768px) {
+    .major, .subheading{
+        font-size: 1rem;
     }
 }
