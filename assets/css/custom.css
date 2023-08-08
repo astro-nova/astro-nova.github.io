@@ -213,24 +213,6 @@ p{
 }
 
 /* Research page */
-/* #researchBanner{
-    --bannerWidth: 100%;
-    width: var(--bannerWidth);
-    transition: all 0.5s;
-    background-image: url('../../images/quenching.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 0;
-    padding-top: calc(0.36 * var(--bannerWidth));
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-#researchBanner:hover{
-    transition: all 0.5s;
-    background-image: url('../../images/quenching_hover.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-} */
 #researchBanner{
     /* --bannerWidth: 90%;
     width: var(--bannerWidth); */
@@ -243,7 +225,6 @@ p{
     align-content: space-around;
 }
 #researchBanner img{ 
-    /* display: block; */
     position: absolute;
     top: 0;
     left: 0; 
