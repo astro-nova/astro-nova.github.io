@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-    --sidebarWidthSm: max(5vw, 10vh);
+    --sidebarWidthSm: min(5vw, 10vh);
     --sidebarWidthLg: max(25vw, 35vh)
 }
 
@@ -85,7 +85,7 @@ p{
 /* Navbar */
 #sidebar ul li, #sidebar #nav-button {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 3.5rem;
     padding-left: 30%;
 }
@@ -94,6 +94,12 @@ p{
     margin-right: 1rem;
     vertical-align: -7%;
 }
+@media screen and (max-width: 1680px) {
+    #sidebar i  {
+        font-size: 1rem;
+    }
+}
+
 
 #sidebar a{
     color: inherit;
