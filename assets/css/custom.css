@@ -171,6 +171,22 @@ p{
 
 }
 
+/* Social icons */
+#social-icons {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 10%; /* Adjust as needed */
+    font-size: 3rem;
+  }
+  
+#social-icons a {
+    display: inline-block;
+    margin-left: 10px; /* Adjust to control spacing between icons */
+    font-size: 1.8rem;
+    color: #224
+}
+
+
 
 /* All pages */
 #home, #research, #outreach, #about, #contact, #academia {
