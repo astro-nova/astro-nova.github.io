@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-    --sidebarWidthSm: min(5vw, 10vh);
+    --sidebarWidthSm: min(10vw, 10vh);
     --sidebarWidthLg: max(25vw, 35vh)
 }
 
