@@ -34,6 +34,7 @@ p{
     margin-bottom: 2.5rem;
 }
 
+
 /* Sidebar */
 
 /* Large screens: large sidebar with photo */
@@ -263,4 +264,62 @@ table thead{
     .major, .subheading{
         font-size: 1rem;
     }
+}
+
+/* About me gallery */
+
+
+.image-box {
+    width: 15vw;
+    margin: 2px;
+}
+
+@media (max-width: 1500px) {
+    .image-box {
+        width: 20vw;
+    }
+ }
+ @media (max-width: 800px) {
+    .image-box {
+        width: 40vw;
+    }
+ }
+
+
+.image-box img {
+    display: block;
+    width: 100%;
+}
+  
+.image-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+  
+.image-box .title-card{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10%;
+}
+
+.image-box .title-card p{
+    margin: 0;
+    text-align: center;
+}
+.image-box .caption{
+    font-size: 0.7rem;
+    margin-top: 0;
+}
+.image-box:hover .overlay {
+opacity: 1;
 }

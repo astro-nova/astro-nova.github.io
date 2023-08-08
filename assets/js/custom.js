@@ -94,4 +94,17 @@
         }
     });
 
+
+
+    // init Masonry
+    var $grid = $('.gallery').masonry({
+        itemSelector: '.image-box'
+    });
+    // layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
+    });
+
+
 })(jQuery);
+
