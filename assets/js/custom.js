@@ -78,4 +78,20 @@
         $('#sidebar, #content').toggleClass('active');
     });
 
+    // Scrolling research banner
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY - 1.25*this.window.innerHeight;
+        const image2 = document.getElementById('banner2');
+    
+        // You can adjust the value to control the speed of the fade-in
+        const opacity = scrollPosition / 100;
+    
+        // Set the opacity of the second image based on the scroll position
+        if (opacity < 1) {
+            image2.style.opacity = opacity;
+        } else {
+            image2.style.opacity = 1;
+        }
+    });
+
 })(jQuery);

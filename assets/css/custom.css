@@ -5,6 +5,7 @@
 }
 
 
+
 /* Colors */
 .blue{
     color: #33AAFF;
@@ -27,6 +28,10 @@ a{
 p{
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.major{
+    margin-bottom: 2.5rem;
 }
 
 /* Sidebar */
@@ -56,6 +61,11 @@ p{
     position: absolute;
     top: 0;
     right: 0;
+}
+@media screen and (max-width: 1680px) {
+    #content {
+        padding: 0 1rem 0 1rem;
+    }
 }
 
 
@@ -168,7 +178,8 @@ p{
 }
 
 .subheading{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    margin-bottom: 0;
 }
 .subheading::after{
     margin-top: 0;
@@ -185,6 +196,7 @@ p{
 
 #home{
     min-height: 100%;
+    padding-top: 10vh;
 }
 #social{
     position: absolute;
@@ -201,7 +213,7 @@ p{
 }
 
 /* Research page */
-#researchBanner{
+/* #researchBanner{
     --bannerWidth: 100%;
     width: var(--bannerWidth);
     transition: all 0.5s;
@@ -218,8 +230,40 @@ p{
     background-image: url('../../images/quenching_hover.png');
     background-size: contain;
     background-repeat: no-repeat;
+} */
+#researchBanner{
+    /* --bannerWidth: 90%;
+    width: var(--bannerWidth); */
+    /* padding-top: calc(0.36 * var(--bannerWidth));
+    margin-top: 2rem;
+    margin-bottom: 2rem; */
+    position: relative;
+    width: 100%;
+    padding-top: 30%; /* 16:9 Aspect Ratio */
+    align-content: space-around;
+}
+#researchBanner img{ 
+    /* display: block; */
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.1s; /* Smooth transition */
+}
+#banner2{
+    opacity: 0;
+} 
+
+table{
+    font-size: 0.8rem;
+    margin-top: 1rem;
 }
 
+table thead{
+    font-weight: 600 !important;
+}
 /* Community page */
 #community .col, #outreach .col{
     margin: 1rem 0 0 0;

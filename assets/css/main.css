@@ -116,7 +116,7 @@ input, select, textarea {
 /* Type */
 
 	html {
-		font-size: 18pt;
+		font-size: 16pt;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -2925,7 +2925,7 @@ input, select, textarea {
 	}
 
 /* Table */
-
+/* 
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
 		margin: 0 0 2rem 0;
@@ -3026,7 +3026,7 @@ input, select, textarea {
 
 	table.uniform tbody tr:nth-child(2n + 1) {
 		background-color: transparent;
-	}
+	} */
 
 /* Banner (transitions) */
 
